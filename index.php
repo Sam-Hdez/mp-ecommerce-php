@@ -137,7 +137,7 @@
                                                                     <span class="as-filter-name">
                                                                         <span class="as-search-filter-content">
                                                                             <span class="as-search-filter-text">
-                                                                                Motorola
+                                                                                Motorola Moto Z
                                                                             </span>
                                                                         </span>
                                                                     </span>
