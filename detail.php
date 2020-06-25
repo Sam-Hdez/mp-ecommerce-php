@@ -11,7 +11,7 @@
     src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
     crossorigin="anonymous"></script>
-
+    
     <script src="https://www.mercadopago.com/v2/security.js" view="detail.php"></script>
 
     <link rel="stylesheet" href="./assets/category-landing.css" media="screen, print">
@@ -133,12 +133,6 @@
                                         </h3>
                                     </div>
                                     <button type="submit" class="mercadopago-button" formmethod="post">Pagar</button>
-                                    <form action="/procesar-pago" method="POST">Pagar la compra
-                                        <script
-                                        src="https://www.mercadopago.com.mx/integrations/v1/web-payment-checkout.js"
-                                        data-preference-id="<?php echo $preference->id; ?>">
-                                        </script>
-                                    </form>
                                 </div>
                             </div>
                         </div>
