@@ -150,7 +150,7 @@
                                             <?php echo $_POST['unit'] ?>
                                         </h3>
                                     </div>
-                                    <button type="submit" class="mercadopago-button" formmethod="post">Pagar</button>
+                                    <!--<button type="submit" class="mercadopago-button" formmethod="post">Pagar</button>-->
                                     <form method="POST">
                                         <script
                                         src="https://www.mercadopago.com.mx/integrations/v1/web-payment-checkout.js"
