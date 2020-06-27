@@ -64,6 +64,9 @@
         $item->category_id = "phones";
         $preference->items = array($item);
         $preference->save();
+        
+        $paymet = new MercadoPago\Payment();
+        $payment->collector_id = "592190948";
 
         $payer = new MercadoPago\Payer();
         $payer->name = "Lalo";
@@ -174,7 +177,7 @@
                                     <form method="POST">
                                         <script
                                         src="https://www.mercadopago.com.mx/integrations/v1/web-payment-checkout.js"
-                                        data-preference-id="<?php echo $preference->id; ?>">
+                                        data-button-label="Pagar la compra" data-preference-id="<?php echo $preference->id; ?>">
                                         </script>
                                     </form>
                                 </div>
