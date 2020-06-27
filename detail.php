@@ -66,6 +66,7 @@
         $preference->save();
         
         $paymet = new MercadoPago\Payment();
+        $payment = MercadoPago\Payment::find_by_id($payment_id);
         $payment->collector_id = "592190948";
 
         $payer = new MercadoPago\Payer();
