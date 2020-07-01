@@ -67,23 +67,23 @@
         $preference->items = array($item);
         $preference->save();
         
-        /*$paymet = new MercadoPago\Payment();
+        $paymet = new MercadoPago\Payment();
         $payment = MercadoPago\Payment::find_by_id($payment_id);
-        $payment->collector_id = "592190948";*/
+        $payment->collector_id = "592190948";
 
         $payer = new MercadoPago\Payer();
-        //$payer->name = "Lalo";
-        //$payer->surname = "Landa";
-        //$payer->email = "test_user_58295862@testuser.com";
-        //$payer->date_created = "2018-06-02T12:58:41.425-04:00";
-        //$payer->phone = array("area_code" => "52","number" => "5549737300");
+        $payer->name = "Lalo";
+        $payer->surname = "Landa";
+        $payer->email = "test_user_58295862@testuser.com";
+        $payer->date_created = "2018-06-02T12:58:41.425-04:00";
+        $payer->phone = array("area_code" => "52","number" => "5549737300");
         
-        //$payer->address = array("street_name" => "Insurgentes Sur","street_number" => 1602,"zip_code" => "03940");
+        $payer->address = array("street_name" => "Insurgentes Sur","street_number" => 1602,"zip_code" => "03940");
 
         $preference->back_urls = array(
-            "success" => "https://sam-hdez-mp-ecommerce-php.herokuapp.com//success",
-            "failure" => "https://sam-hdez-mp-ecommerce-php.herokuapp.com//failure",
-            "pending" => "https://sam-hdez-mp-ecommerce-php.herokuapp.com//pending"
+            "success" => "https://sam-hdez-mp-ecommerce-php.herokuapp.com/success",
+            "failure" => "https://sam-hdez-mp-ecommerce-php.herokuapp.com/failure",
+            "pending" => "https://sam-hdez-mp-ecommerce-php.herokuapp.com/pending"
         );
         $preference->auto_return = "approved";
     ?>
