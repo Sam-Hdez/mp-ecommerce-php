@@ -65,11 +65,17 @@
         $item->unit_price = $price;
         $item->category_id = "phones";
         $preference->items = array($item);
+        $preference->payment_methods = array(
+            "collector_id" => intval("592190948"),
+            "excluded_payment_methods" => array(
+              array("id" => "amex")
+            ),
+            "excluded_payment_types" => array(
+              array("id" => "atm")
+            ),
+            "installments" => 6
+          );
         $preference->save();
-        
-        /*$paymet = new MercadoPago\Payment();
-        $payment = MercadoPago\Payment::find_by_id($payment_id);
-        $payment->collector_id = "592190948";*/
 
         $payer = new MercadoPago\Payer();
         $payer->name = "Lalo";
@@ -86,6 +92,11 @@
             "pending" => "https://sam-hdez-mp-ecommerce-php.herokuapp.com/pending"
         );
         $preference->auto_return = "all";
+
+        $paymet = new MercadoPago\Payment();
+        $payment = MercadoPago\Payment::find_by_id($payment_id);
+        $payment->collector_id = "592190948";
+
     ?>
 <body class="as-theme-light-heroimage">
 
