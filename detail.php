@@ -50,6 +50,7 @@
 
         // Agrega credenciales
         MercadoPago\SDK::setAccessToken('APP_USR-8058997674329963-062418-89271e2424bb1955bc05b1d7dd0977a8-592190948');
+        $image=$_POST["img"];
         $producto=$_POST["title"];
         $price=$_POST["price"];
         $unit=intval($_POST["unit"]);
@@ -58,6 +59,7 @@
         // Crea un ítem en la preferencia
         $item = new MercadoPago\Item();
         $item->id = "1234";
+        $item->picture_url = $image;
         $item->title = $producto;
         $item->quantity = $unit;
         $item->unit_price = $price;
@@ -70,13 +72,13 @@
         $payment->collector_id = "592190948";*/
 
         $payer = new MercadoPago\Payer();
-        $payer->name = "Lalo";
-        $payer->surname = "Landa";
-        $payer->email = "test_user_58295862@testuser.com";
-        $payer->date_created = "2018-06-02T12:58:41.425-04:00";
-        $payer->phone = array("area_code" => "52","number" => "5549737300");
+        //$payer->name = "Lalo";
+        //$payer->surname = "Landa";
+        //$payer->email = "test_user_58295862@testuser.com";
+        //$payer->date_created = "2018-06-02T12:58:41.425-04:00";
+        //$payer->phone = array("area_code" => "52","number" => "5549737300");
         
-        $payer->address = array("street_name" => "Insurgentes Sur","street_number" => 1602,"zip_code" => "03940");
+        //$payer->address = array("street_name" => "Insurgentes Sur","street_number" => 1602,"zip_code" => "03940");
 
         $preference->back_urls = array(
             "success" => "https://sam-hdez-mp-ecommerce-php.herokuapp.com//success",
@@ -144,7 +146,7 @@
                                             <div class="clearfix image-list xs-no-js as-util-relatedlink relatedlink" data-relatedlink="6|Powerbeats3 Wireless Earphones - Neighborhood Collection - Brick Red|MPXP2">
                                                 <div class="as-tilegallery-element as-image-selected">
                                                     <div class=""></div>
-                                                    <img src="./assets/003.jpg" class="ir ir item-image as-producttile-image" alt="" width="445" height="445" style="content:-webkit-image-set(url(<?php echo $_POST['img'] ?>) 2x);">
+                                                    <img name="img" src="./assets/003.jpg" class="ir ir item-image as-producttile-image" alt="" width="445" height="445" style="content:-webkit-image-set(url(<?php echo $_POST['img'] ?>) 2x);">
                                                 </div>
                                                 
                                             </div>
