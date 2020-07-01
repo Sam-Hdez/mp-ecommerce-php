@@ -66,10 +66,10 @@
         $item->unit_price = $price;
         $item->category_id = "phones";
         $preference->items = array($item);
-        $preference->collector_id =  intval("592190948");
         $preference->external_reference = "samuel.hdez.adms@gmail.com";
+        $preference->collector_id =  intval("592190948");
         $preference->payment_methods = array(
-            "collector_id" => intval("592190948"),
+            //"collector_id" => intval("592190948"),
             "excluded_payment_methods" => array(
               array("id" => "amex")
             ),
