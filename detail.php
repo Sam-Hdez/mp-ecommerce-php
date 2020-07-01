@@ -146,7 +146,7 @@
                                             <div class="clearfix image-list xs-no-js as-util-relatedlink relatedlink" data-relatedlink="6|Powerbeats3 Wireless Earphones - Neighborhood Collection - Brick Red|MPXP2">
                                                 <div class="as-tilegallery-element as-image-selected">
                                                     <div class=""></div>
-                                                    <img name="img" src="./assets/003.jpg" class="ir ir item-image as-producttile-image" alt="" width="445" height="445" style="content:-webkit-image-set(url(<?php echo $_POST['img'] ?>) 2x);">
+                                                    <img src="./assets/003.jpg" class="ir ir item-image as-producttile-image" alt="" width="445" height="445" style="content:-webkit-image-set(url(<?php echo $_POST['img'] ?>) 2x);">
                                                 </div>
                                                 
                                             </div>
@@ -177,6 +177,7 @@
                                                 <?php echo $_POST['unit'] ?>
                                             </h3>
                                         </div>
+                                        <input type="hidden" name="img" value="<?php echo $_POST['img'] ?>">
                                         <!--<button type="submit" class="mercadopago-button" formmethod="post">Pagar</button>-->
                                         <script
                                         src="https://www.mercadopago.com.mx/integrations/v1/web-payment-checkout.js"
