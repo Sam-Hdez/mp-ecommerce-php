@@ -158,24 +158,24 @@
 
                                 </div>
                                 <div class="as-producttile-info" style="float:left;min-height: 168px;">
-                                    <div class="as-producttile-titlepricewraper" style="min-height: 128px;">
-                                        <div class="as-producttile-title">
-                                            <h3 class="as-producttile-name">
-                                                <p class="as-producttile-tilelink">
-                                                    <span id="product_name" name="product_name" data-ase-truncate="2"><?php echo $_POST['title'] ?></span>
-                                                </p>
+                                    <form method="POST">
+                                        <div class="as-producttile-titlepricewraper" style="min-height: 128px;">
+                                            <div class="as-producttile-title">
+                                                <h3 class="as-producttile-name">
+                                                    <p class="as-producttile-tilelink">
+                                                        <span id="product_name" name="product_name" data-ase-truncate="2"><?php echo $_POST['title'] ?></span>
+                                                    </p>
 
+                                                </h3>
+                                            </div>
+                                            <h3 id="price" name="price">
+                                                <?php echo "$".$_POST['price'] ?>
+                                            </h3>
+                                            <h3 id="unit" name="unit">
+                                                <?php echo $_POST['unit'] ?>
                                             </h3>
                                         </div>
-                                        <h3 id="price" name="price">
-                                            <?php echo "$".$_POST['price'] ?>
-                                        </h3>
-                                        <h3 id="unit" name="unit">
-                                            <?php echo $_POST['unit'] ?>
-                                        </h3>
-                                    </div>
-                                    <!--<button type="submit" class="mercadopago-button" formmethod="post">Pagar</button>-->
-                                    <form method="POST">
+                                        <!--<button type="submit" class="mercadopago-button" formmethod="post">Pagar</button>-->
                                         <script
                                         src="https://www.mercadopago.com.mx/integrations/v1/web-payment-checkout.js"
                                         data-button-label="Pagar la compra" data-preference-id="<?php echo $preference->id; ?>">
