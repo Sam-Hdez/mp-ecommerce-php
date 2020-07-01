@@ -85,6 +85,7 @@
             "failure" => "https://sam-hdez-mp-ecommerce-php.herokuapp.com/failure",
             "pending" => "https://sam-hdez-mp-ecommerce-php.herokuapp.com/pending"
         );
+        $preference->auto_return = "all";
     ?>
 <body class="as-theme-light-heroimage">
 
