@@ -51,7 +51,7 @@
         // Agrega credenciales
         MercadoPago\SDK::setAccessToken('APP_USR-8058997674329963-062418-89271e2424bb1955bc05b1d7dd0977a8-592190948');
         $producto=$_POST["title"];
-        $image=$_POST['img'];
+        $image="https://sam-hdez-mp-ecommerce-php.herokuapp.com/".$_POST['img'];
         $price=floatval($_POST["price"]);
         $unit=intval($_POST["unit"]);
         // Crea un objeto de preferencia
@@ -61,10 +61,13 @@
         $item->id = "1234";
         $item->picture_url = $image;
         $item->title = $producto;
+        $item->description = "Dispositivo móvil de Tienda e-commerce";
         $item->quantity = $unit;
         $item->unit_price = $price;
         $item->category_id = "phones";
         $preference->items = array($item);
+        $preference->collector_id =  intval("592190948");
+        $preference->external_reference = "samuel.hdez.adms@gmail.com",
         $preference->payment_methods = array(
             "collector_id" => intval("592190948"),
             "excluded_payment_methods" => array(
