@@ -93,9 +93,9 @@
         );
         $preference->auto_return = "all";
 
-        $paymet = new MercadoPago\Payment();
+        /*$paymet = new MercadoPago\Payment();
         $payment = MercadoPago\Payment::find_by_id($payment_id);
-        $payment->collector_id = "592190948";
+        $payment->collector_id = "592190948";*/
 
     ?>
 <body class="as-theme-light-heroimage">
