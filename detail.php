@@ -52,7 +52,7 @@
         MercadoPago\SDK::setAccessToken('APP_USR-8058997674329963-062418-89271e2424bb1955bc05b1d7dd0977a8-592190948');
         $producto=$_POST["title"];
         $price=$_POST["price"];
-        $unit=$_POST["unit"];
+        $unit=intval($_POST["unit"]);
         // Crea un objeto de preferencia
         $preference = new MercadoPago\Preference();
         // Crea un ítem en la preferencia
@@ -163,15 +163,15 @@
                                             <div class="as-producttile-title">
                                                 <h3 class="as-producttile-name">
                                                     <p class="as-producttile-tilelink">
-                                                        <span id="product_name" name="product_name" data-ase-truncate="2"><?php echo $_POST['title'] ?></span>
+                                                        <span name="title" data-ase-truncate="2"><?php echo $_POST['title'] ?></span>
                                                     </p>
 
                                                 </h3>
                                             </div>
-                                            <h3 id="price" name="price">
+                                            <h3 name="price">
                                                 <?php echo "$".$_POST['price'] ?>
                                             </h3>
-                                            <h3 id="unit" name="unit">
+                                            <h3 name="unit">
                                                 <?php echo $_POST['unit'] ?>
                                             </h3>
                                         </div>
