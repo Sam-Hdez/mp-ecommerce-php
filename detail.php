@@ -50,7 +50,7 @@
 
         // Agrega credenciales
         MercadoPago\SDK::setAccessToken('APP_USR-8058997674329963-062418-89271e2424bb1955bc05b1d7dd0977a8-592190948');
-        $producto=$_POST["product_name"];
+        $producto=$_POST["title"];
         $price=$_POST["price"];
         $unit=$_POST["unit"];
         // Crea un objeto de preferencia
