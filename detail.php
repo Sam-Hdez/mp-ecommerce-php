@@ -52,6 +52,7 @@
         MercadoPago\SDK::setAccessToken('APP_USR-8058997674329963-062418-89271e2424bb1955bc05b1d7dd0977a8-592190948');
         $producto=$_POST["title"];
         $image="https://sam-hdez-mp-ecommerce-php.herokuapp.com/".$_POST['img'];
+        echo $image;
         $price=floatval($_POST["price"]);
         $unit=intval($_POST["unit"]);
         // Crea un objeto de preferencia
