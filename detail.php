@@ -90,9 +90,9 @@
         $payer->address = array("street_name" => "Insurgentes Sur","street_number" => 1602,"zip_code" => "03940");
 
         $preference->back_urls = array(
-            "success" => "https://sam-hdez-mp-ecommerce-php.herokuapp.com/success.php",
-            "failure" => "https://sam-hdez-mp-ecommerce-php.herokuapp.com/failure.php",
-            "pending" => "https://sam-hdez-mp-ecommerce-php.herokuapp.com/pending.php"
+            "success" => "https://sam-hdez-mp-ecommerce-php.herokuapp.com/success",
+            "failure" => "https://sam-hdez-mp-ecommerce-php.herokuapp.com/failure",
+            "pending" => "https://sam-hdez-mp-ecommerce-php.herokuapp.com/pending"
         );
         $preference->auto_return = "all";
 
