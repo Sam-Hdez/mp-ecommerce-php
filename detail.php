@@ -78,7 +78,6 @@
             ),
             "installments" => 6
           );
-        $preference->save();
 
         $payer = new MercadoPago\Payer();
         $payer->name = "Lalo";
@@ -99,6 +98,7 @@
         /*$paymet = new MercadoPago\Payment();
         $payment = MercadoPago\Payment::find_by_id($payment_id);
         $payment->collector_id = "592190948";*/
+        $preference->save();
 
     ?>
 <body class="as-theme-light-heroimage">
