@@ -52,7 +52,6 @@
         MercadoPago\SDK::setAccessToken('APP_USR-8058997674329963-062418-89271e2424bb1955bc05b1d7dd0977a8-592190948');
         $producto=$_POST["title"];
         $image=str_replace("./", "https://sam-hdez-mp-ecommerce-php.herokuapp.com/", $_POST['img']);
-        echo $image;
         $price=floatval($_POST["price"]);
         $unit=intval($_POST["unit"]);
         // Crea un objeto de preferencia
@@ -91,9 +90,9 @@
         $payer->address = array("street_name" => "Insurgentes Sur","street_number" => 1602,"zip_code" => "03940");
 
         $preference->back_urls = array(
-            "success" => "https://sam-hdez-mp-ecommerce-php.herokuapp.com/success",
-            "failure" => "https://sam-hdez-mp-ecommerce-php.herokuapp.com/failure",
-            "pending" => "https://sam-hdez-mp-ecommerce-php.herokuapp.com/pending"
+            "success" => "https://sam-hdez-mp-ecommerce-php.herokuapp.com/success.php",
+            "failure" => "https://sam-hdez-mp-ecommerce-php.herokuapp.com/failure.php",
+            "pending" => "https://sam-hdez-mp-ecommerce-php.herokuapp.com/pending.php"
         );
         $preference->auto_return = "all";
 
